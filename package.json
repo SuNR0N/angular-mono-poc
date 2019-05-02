@@ -1,0 +1,27 @@
+{
+  "name": "angular-mono-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "annus.norbert@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "postinstall": "yarn build:foobar",
+    "build:bar": "yarn lerna run build --scope=@amp/bar",
+    "build:foo": "yarn lerna run build --scope=@amp/foo",
+    "build:foobar": "yarn lerna run build --scope=@amp/foobar",
+    "start:bar": "lerna run start --scope=@amp/bar",
+    "start:foo": "yarn lerna run start --scope=@amp/foo",
+    "watch:foobar": "yarn lerna run build -- --scope=@amp/foobar -- --watch"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.4"
+  },
+  "dependencies": {
+    "@angular/cli": "^7.3.8"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ]
+}
