@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@amp/foobar": [
-        "../../libs/foobar/dist/@amp/foobar"
+        "../../dist/@amp/foobar"
       ]
     }
   }
